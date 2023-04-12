@@ -12,14 +12,14 @@ flowchart LR
     end
 
     subgraph EdgeQL
-        kv
+        cache
     end
 
     subgraph Backend[Your GraphQL Backend]
         server
     end
 
-    query <--> kv
-    mutation <--> kv
-    kv <--> server
+    query <--> cache
+    mutation <--> cache
+    cache <--> server
 ```
